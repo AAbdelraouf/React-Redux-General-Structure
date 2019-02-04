@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Store from '../Redux/Store/Store';
-
 class Counter extends Component {
     constructor(props) {
         super(props);
@@ -16,22 +15,16 @@ class Counter extends Component {
     onClickDispatch = (e) => {
         e.preventDefault()
         const stateValue = this.state.inputValue
-        if(stateValue === ""){ alert("Empty value") }
+        if(stateValue === ""){console.log("Empty value")}
         else{
             Store.dispatch({ type: 'ADD', payLoad: stateValue });
             this.setState({ inputValue:'' })
         }
-
     }
 
     render() {
         return (
             <div>
-                {/* <p>
-                    {this.props.data.map((data, key) => {
-                    return <div> <p key =  {key}> {data} </p>  </div>
-                    })}
-                </p> */}
                 <form action="submit">
                     <input type="text" value = {this.state.inputValue} onChange = {this.onChangeSaveValue} placeholder="type here"/>
                     <button onClick={this.onClickDispatch}>Click here</button>
