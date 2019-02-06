@@ -1,6 +1,6 @@
 import {createStore} from 'redux';
 import Reducer from '../Reducer/Reducer'
-const initialState = [0]
+const initialState = []
 
 const Store = createStore(Reducer, initialState);
 

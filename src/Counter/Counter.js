@@ -32,9 +32,7 @@ class Counter extends Component {
                 <p>
                     {this.props.data.map((data, key) => <li key = {key} > {data} </li> )}
                 </p>
-
-                <p>{this.state.inputValue}</p>
-
+                
             </div>
         );
     }
