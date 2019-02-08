@@ -4,31 +4,32 @@ import Store from '../Redux/Store/Store';
 import Firebase from '../Firebase/Firebase';
 
 
-class Counter extends Component {
+class List extends Component {
     constructor(props) {
+        
         super(props);
-        this.state = { inputValue : '' }
+            this.state = { inputValue : '' 
+    }
 
         this.onChangeSaveValue = this.onChangeSaveValue.bind(this);
         this.onClickDispatch = this.onClickDispatch.bind(this);
     }
 
     onChangeSaveValue = (e) => {this.setState({ inputValue: e.target.value })};
-
     onClickDispatch = (e) => {
         e.preventDefault()
         const stateValue = this.state.inputValue
         if(stateValue === ""){console.log("Empty value")}
         else{
             Store.dispatch({ type: 'ADD', payLoad: stateValue });
-            this.setState({ inputValue:'' })
+            this.setState({ inputValue:'' });
             Firebase.database().ref("Notes").push({ Note: this.state.inputValue })
-        }
+        }        
     }
-
+    
     render() {
         return (
-            <div>
+                <div>
                 <form action="submit">
                     <input type="text" value = {this.state.inputValue} onChange = {this.onChangeSaveValue} 
                     placeholder="type here"/>
@@ -42,7 +43,8 @@ class Counter extends Component {
         );
     }
 }
-const mapState = (state) => {
+const mapState = (state) => 
+{
     return {data: state}
 }
-export default connect(mapState)(Counter);
+export default connect(mapState)(List);
