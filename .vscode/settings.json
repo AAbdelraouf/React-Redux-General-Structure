@@ -1,5 +1,7 @@
 {
     "bracketPairColorizer.colorMode": "Independent",
-    "editor.fontFamily": "Source Code Pro",
+    "editor.fontFamily":  "Source Code Pro"
+    // "Source Code Pro"
+    ,
     "editor.fontSize": 13
 }
