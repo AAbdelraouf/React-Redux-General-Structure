@@ -20,7 +20,6 @@ class RetrieveDataFromFirebase extends Component {
                 <p>RetrieveDataFromFirebase Component</p>
                 {this.props.dataFromReduxStore.map((data, key) => { 
                     return <p key = {key}><ListStructure notes = {data} /></p> 
-                    {/* <li key={key}> {data} </li> */}
                  })}
                  
             </div>
