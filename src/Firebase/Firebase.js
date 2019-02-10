@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-import * as firebase from "firebase";
+import * as Firebase from "firebase";
 
 // Initialize Firebase
 var config = {
@@ -11,6 +11,10 @@ var config = {
     storageBucket: "witnesseye-d2e7e.appspot.com",
     messagingSenderId: "410854823515"
 };
-firebase.initializeApp(config);
+Firebase.initializeApp(config);
 
-export default !firebase.apps.length ? firebase.initializeApp(config): firebase.app();
+export default !Firebase.apps.length ? Firebase.initializeApp(config): Firebase.app();
+
+
+
+

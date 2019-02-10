@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-
 import Firebase from '../Firebase/Firebase'
 import Store from '../Redux/Store/Store';
 import {connect} from 'react-redux'
-
+import  ListStructure  from './ListStructure';
 
 class RetrieveDataFromFirebase extends Component {
     
@@ -12,7 +11,6 @@ class RetrieveDataFromFirebase extends Component {
         itemsRef.on('child_added', (snapshot) => {
             let notesFromFirebase = snapshot.val();
             Store.dispatch({ type: 'Notes-From-Firebase', payLoad: notesFromFirebase.title })
-
         });
     };
 
@@ -21,8 +19,10 @@ class RetrieveDataFromFirebase extends Component {
             <div>   
                 <p>RetrieveDataFromFirebase Component</p>
                 {this.props.dataFromReduxStore.map((data, key) => { 
-                    return <ul key = {key} > {data} </ul>
+                    return <p key = {key}><ListStructure notes = {data} /></p> 
+                    {/* <li key={key}> {data} </li> */}
                  })}
+                 
             </div>
         );
     }
