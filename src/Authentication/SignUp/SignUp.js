@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Firebase from '../Firebase/Firebase'
+import Firebase from '../../Firebase/Firebase'
 
 class SignUp extends Component {
     constructor(props) {
@@ -12,7 +12,7 @@ class SignUp extends Component {
     }
      
     signup = (email, pass) => {
-        const emailFromState = this.state.email
+        // const emailFromState = this.state.email
         const passwordFromState =  this.state.password
         const repeatedPasswordFromState =  this.state.repeatedPassword
         if(passwordFromState !== repeatedPasswordFromState){ 

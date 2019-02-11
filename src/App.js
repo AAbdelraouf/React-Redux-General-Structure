@@ -3,7 +3,7 @@ import {Provider} from 'react-redux';
 import React, {Component} from 'react';
 import Store from './Redux/Store/Store';
 import List from './List/List';
-import SignUp from './Authentication/SignUp';
+import SignUp from './Authentication/SignUp/SignUp';
 
 class App extends Component {
     constructor(props) {

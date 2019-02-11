@@ -7,10 +7,10 @@ class List extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            inputValue: '',
-            username  : 'User Name',
+            inputValue:  '',
+            username  :  'User Name',
             email     :  'ahmedabd2018@gmail.com',
-            password      :  'Allahis1'
+            password  :  'Allahis1'
             
         }
 
