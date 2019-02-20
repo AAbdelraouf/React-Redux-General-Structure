@@ -3,7 +3,8 @@ import {Provider} from 'react-redux';
 import React, {Component} from 'react';
 import Store from './Redux/Store/Store';
 import List from './List/List';
-import SignUp from './Authentication/SignUp/SignUp';
+
+import SignIn from './Authentication/SignIn/SignIn'
 
 class App extends Component {
     constructor(props) {
@@ -12,12 +13,11 @@ class App extends Component {
         this.showComponents = this.showComponents.bind(this);
     }
 
-    showComponents = () => {
-        
+    showComponents = () => {        
         if (false) {
             return <List/>
         } else {
-            return <SignUp/>
+            return <SignIn />
         }
     }
 

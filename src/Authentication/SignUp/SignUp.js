@@ -41,31 +41,31 @@ saveRepeatedPasswordInState = (val) => { this.setState({ repeatedPassword : val.
 
     render() {
         return (
-                <div>
-                <h1>Sign up to use the site</h1>
-                    <input type="text" placeholder = "Enter your email" 
-                    value = {this.state.email}
-                    onChange = {(val) => { this.saveEmailInState(val)}  } />
+            <div>
+            <h1>Sign up to use the site</h1>
+                <input type="text" placeholder = "Enter your email" 
+                value = {this.state.email}
+                onChange = {(val) => { this.saveEmailInState(val)}  } />
 
-                    <input type="text" placeholder = "Enter your password" 
-                    value = {this.state.password}
-                        onChange = {(val) => {this.savePasswordInState(val) }}
-                    />
+                <input type="Password" placeholder = "Enter your password" 
+                value = {this.state.password}
+                    onChange = {(val) => {this.savePasswordInState(val) }}
+                />
 
-                    <input type="text" placeholder = "Repeat your password"
+                <input
+                    type={'Password'}
+                    placeholder = "Repeat your password"
                     value = {this.state.repeatedPassword}
-                        onChange = {(val) => {this.saveRepeatedPasswordInState(val)}}
-                    />
+                    onChange = {(val) => {this.saveRepeatedPasswordInState(val)}} />
 
-                    <button onClick = {(email, password) => 
-                    this.signup(this.state.email, this.state.password)}>
+                <button onClick = {(email, password) => 
+                this.signup(this.state.email, this.state.password)}>
 
-                    Sign up now!</button>
-                    <p>{this.state.email}</p>
-                    <p>{this.state.password}</p>
-                    <p>{this.state.repeatedPassword}</p>
-                </div>
-            
+                Sign up now!</button>
+                <p>{this.state.email}</p>
+                <p>{this.state.password}</p>
+                <p>{this.state.repeatedPassword}</p>
+            </div>
         );
     }
 }
